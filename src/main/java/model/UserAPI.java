@@ -46,6 +46,8 @@ public class UserAPI extends HttpServlet {
 				request.getParameter("password"));
 		
 		response.getWriter().write(output);
+		doGet(request,response);
+		
 	}
 
 	/**

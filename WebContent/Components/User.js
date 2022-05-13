@@ -54,7 +54,7 @@ function onUserSaveComplete(response, status)
 			 { 
 				 $("#alertSuccess").text("Successfully saved."); 
 				 $("#alertSuccess").show(); 
-				 $("#divItemsGrid").html(resultSet.data); 
+				 $("#divUserGrid").html(resultSet.data); 
 			
 			 } else if (resultSet.status.trim() == "error") 
 			 { 
@@ -99,9 +99,9 @@ $(document).on("click", ".btnRemove", function(event)
 { 
 		 $.ajax( 
 		 { 
-			 url : "ItemsAPI", 
+			 url : "UserAPI", 
 			 type : "DELETE", 
-			 data : "itemID=" + $(this).data("itemid"),
+			 data : "userID=" + $(this).data("userid"),
 			 dataType : "text", 
 			 complete : function(response, status) 
 		 { 
