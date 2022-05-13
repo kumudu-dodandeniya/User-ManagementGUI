@@ -37,7 +37,8 @@ public class UserAPI extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		String output = userObj.insertUser(request.getParameter("userCode"), 	
+		String output = userObj.insertUser(
+				request.getParameter("userCode"), 	
 				request.getParameter("userName"),
 				request.getParameter("nic"),
 				request.getParameter("phone"), 
@@ -46,7 +47,7 @@ public class UserAPI extends HttpServlet {
 				request.getParameter("password"));
 		
 		response.getWriter().write(output);
-		doGet(request,response);
+		
 		
 	}
 
@@ -58,7 +59,8 @@ public class UserAPI extends HttpServlet {
 		
 			Map paras = getParasMap(request); 
 			
-			String output = userObj.updateUser(paras.get("hidUserIDSave").toString(), 
+			String output = userObj.updateUser(
+					paras.get("hidUserIDSave").toString(), 
 					paras.get("userCode").toString(), 
 					paras.get("userName").toString(),
 					paras.get("nic").toString(),
@@ -78,7 +80,7 @@ public class UserAPI extends HttpServlet {
 		// TODO Auto-generated method stub
 		
 		Map paras = getParasMap(request); 
-		 String output = userObj.deleteUser(paras.get("userID").toString()); 
+		String output = userObj.deleteUser(paras.get("userID").toString()); 
 		response.getWriter().write(output); 
 
 	}

@@ -1,9 +1,9 @@
 $(document).ready(function() 
 { 
-	if ($("#alertSuccess").text().trim() == "") 
-	 { 
+	
+	  
 	 $("#alertSuccess").hide(); 
-	 } 
+	 
 	 $("#alertError").hide(); 
 }); 
 
@@ -83,7 +83,7 @@ function onUserSaveComplete(response, status)
 // UPDATE==========================================
 $(document).on("click", ".btnUpdate", function(event) 
 { 
-	 $("#hidUserIDSave").val($(this).data(userID)); 
+	 $("#hidUserIDSave").val($(this).data(userid)); 
 	 $("#userCode").val($(this).closest("tr").find('td:eq(0)').text()); 
 	 $("#userName").val($(this).closest("tr").find('td:eq(1)').text()); 
 	 $("#nic").val($(this).closest("tr").find('td:eq(2)').text()); 
@@ -143,7 +143,7 @@ function onUserDeleteComplete(response, status)
 }
 
 // CLIENT-MODEL================================================================
-function validateItemForm() 
+function validateUserForm() 
 { 
 	// CODE
 	if ($("#userCode").val().trim() == "") 

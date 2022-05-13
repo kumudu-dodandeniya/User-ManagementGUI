@@ -66,15 +66,14 @@ public class User {
 			 
 			
 			 
-			 String newUsers = readUser(); 
-			 output = "{\"status\":\"success\", \"data\": \"" + 
-			 newUsers + "\"}"; 
+			 String newUser = readUser(); 
+			 output = "{\"status\":\"success\", \"data\": \"" +  newUser + "\"}"; 
 
 			 } 
 		 
 			catch (Exception e) 
 			 { 
-				output = "{\"status\":\"error\", \"data\": \"Error while inserting the item.\"}"; 
+				output = "{\"status\":\"error\", \"data\": \"Error while inserting the user.\"}"; 
 				  
 				 System.err.println(e.getMessage()); 
 			 } 
@@ -143,9 +142,9 @@ public class User {
 					 output += "<td><input name='btnUpdate' type='button' value='Update'"
 					 		+ "class='btnUpdate btn btn-secondary' data-userid='" + userID+ "'></td>"
 						
-						 + "<td><input name='btnRemove' type='button' value='Remove'"
-						 + "class='btnRemove btn btn-danger' data-userid='" + userID + "'></td></tr>";
-				
+							+ "<td><input name='btnRemove' type='button' value='Remove'"
+							+ "class='btnRemove btn btn-danger' data-userid='" + userID + "'></td></tr>";
+					
 				 } 
 				 
 				 con.close(); 
@@ -156,7 +155,7 @@ public class User {
 			
 			catch (Exception e) 
 			{ 
-				 output = "Error while reading the items."; 
+				 output = "Error while reading the user details"; 
 				 System.err.println(e.getMessage()); 
 			} 
 				return output; 
@@ -201,13 +200,12 @@ public class User {
 				 con.close(); 
 				 
 				 String newUser = readUser(); 
-				 output = "{\"status\":\"success\", \"data\": \"" + 
-				 newUser + "\"}"; 
+				 output = "{\"status\":\"success\", \"data\": \"" + newUser + "\"}"; 
 			} 
 			
 			 catch (Exception e) 
 			 { 
-				 output = "{\"status\":\"error\", \"data\": \"Error while updating the item.\"}"; 
+				 output = "{\"status\":\"error\", \"data\": \"Error while updating the user.\"}"; 
 				 System.err.println(e.getMessage()); 
 			 } 
 			
@@ -241,13 +239,13 @@ public class User {
 				con.close(); 
 				
 				String newUser = readUser(); 
-				 output = "{\"status\":\"success\", \"data\": \"" + 
-				 newUser + "\"}"; 
+				output = "{\"status\":\"success\", \"data\": \"" + newUser + "\"}"; 
+				
 			}
 			
 			catch (Exception e) 
 			{ 
-				output = "{\"status\":\"error\", \"data\": \"Error while deleting the item.\"}";
+				output = "{\"status\":\"error\", \"data\": \"Error while deleting the user.\"}";
 				
 				System.err.println(e.getMessage()); 
 			} 
