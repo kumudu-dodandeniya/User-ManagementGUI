@@ -8,7 +8,7 @@
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 <link rel="stylesheet" href="View/bootstrap.min.css">
-<script type="Components/jquery-3.2.1.min.js"></script>
+<script type="Components/jquery-3.6.0.min.js"></script>
 <script type="Components/User.js"></script>
 </head>
 <body>
@@ -18,6 +18,7 @@
 	<h1>User Management</h1>
 
 		<form id = "formUser" name="formUser" method="post" action="User.jsp">
+		
 			 User Code: <input id="userCode"name="userCode" type="text"
 			 			class = "form-control form-control-sm" ><br>
 			 				

@@ -18,9 +18,8 @@ import java.util.Scanner;
 public class UserAPI extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-    /**
-     * Default constructor. 
-     */
+	User userObj = new User();
+	
     public UserAPI() {
         // TODO Auto-generated constructor stub
     }
