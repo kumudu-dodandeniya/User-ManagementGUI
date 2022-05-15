@@ -44,7 +44,7 @@
 			 		class = "btn btn-primary">
 			 		
 			 		
-			 <input type="hidden" id="hidUserIDSave" name="hidUserIDSave" value="">		
+			 <input type="hidden" id="hiduserIDSave" name="hiduserIDSave" value="">		
 		</form>
 		
 	<div id="alertSuccess" class="alert alert-success"></div>

@@ -97,7 +97,7 @@ public class User {
 				 
 				
 				// Prepare the html table to be displayed all user details.
-					 output = "<table border='1'><tr>"
+				 output = "<table border='1'><tr>"
 						+ "<th>User ID</th>"
 						+ "<th>User Code</th>"
 						+ "<th>User Name</th>" 
@@ -128,7 +128,9 @@ public class User {
 				
 				 
 					// Add a row into the html table
-					 output += "<tr><td>" + userID + "</td>";
+					
+					
+					output += "<tr><td>" + userID + "</td>";
 					 output	+= "<td>" +userCode + "</td>";
 					 output += "<td>" + userName + "</td>"; 
 					 output += "<td>" + nic + "</td>"; 
@@ -140,10 +142,12 @@ public class User {
 				
 					 // buttons
 					 output += "<td><input name='btnUpdate' type='button' value='Update'"
-					 		+ "class='btnUpdate btn btn-secondary' data-userid='" + userID+ "'></td>"
+					 		+ "class='btnUpdate btn btn-secondary' data-userid='" + userID + "'></td>"
 						
 							+ "<td><input name='btnRemove' type='button' value='Remove'"
 							+ "class='btnRemove btn btn-danger' data-userid='" + userID + "'></td></tr>";
+					
+
 					
 				 } 
 				 

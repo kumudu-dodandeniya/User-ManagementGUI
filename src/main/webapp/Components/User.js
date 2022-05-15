@@ -29,7 +29,7 @@ $(document).on("click", "#btnSave", function(event)
 	
 	
 		// If valid------------------------
-		var type = ($("#hidUserIDSave").val() == "") ? "POST" : "PUT"; 
+		var type = ($("#hiduserIDSave").val() == "") ? "POST" : "PUT"; 
 		 $.ajax( 
 		 { 
 			 url : "UserAPI", 
@@ -73,7 +73,7 @@ function onUserSaveComplete(response, status)
 			 $("#alertError").show(); 
 		 } 
 		 
-		 $("#hidUserIDSave").val(""); 
+		 $("#hiduserIDSave").val(""); 
 		 $("#formUser")[0].reset(); 
 }
 
@@ -83,7 +83,7 @@ function onUserSaveComplete(response, status)
 // UPDATE==========================================
 $(document).on("click", ".btnUpdate", function(event) 
 { 
-	 $("#hidUserIDSave").val($(this).data(userid)); 
+	 $("#hiduserIDSave").val($(this).data(userid)); 
 	 $("#userCode").val($(this).closest("tr").find('td:eq(0)').text()); 
 	 $("#userName").val($(this).closest("tr").find('td:eq(1)').text()); 
 	 $("#nic").val($(this).closest("tr").find('td:eq(2)').text()); 
@@ -148,47 +148,44 @@ function validateUserForm()
 	// CODE
 	if ($("#userCode").val().trim() == "") 
 	 { 
-	 return "Please Insert User Code."; 
+	 	return "Please Insert User Code."; 
 	 } 
 
 	// NAME
 	if ($("#userName").val().trim() == "") 
 	 { 
-	 return "Please Insert User Name."; 
+	 	return "Please Insert User Name."; 
 	 }
 
 	// NIC-------------------------------
 	if ($("#nic").val().trim() == "") 
 	 { 
-	 return "Please Insert User NIC."; 
+	 	return "Please Insert User NIC."; 
 	 } 
 
 	// PHONE-------------------------------
 	if ($("#phone").val().trim() == "") 
 	 { 
-	 return "Please Insert User Phone Number."; 
+	 	return "Please Insert User Phone Number."; 
 	 } 
 
 	// EMAIL-------------------------------
 		if ($("#email").val().trim() == "") 
 		 { 
-		 return "Please Insert User Email Address."; 
+		 	return "Please Insert User Email Address."; 
 		 } 
 	
 	// ADDRESS-------------------------------
 		if ($("#address").val().trim() == "") 
 		 { 
-		 return "Please Insert User Home Address."; 
+		 	return "Please Insert User Home Address."; 
 		 } 
 	
 	// PASSWORD -------------------------------
 		if ($("#password").val().trim() == "") 
 		 { 
-		 return "Please Insert User Password."; 
+		 	return "Please Insert User Password."; 
 		 } 
 return true; 
 }
 
-/**
- * 
- */
